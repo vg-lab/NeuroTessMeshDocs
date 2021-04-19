@@ -35,6 +35,85 @@ The homepage for NeuroLOTs and NeuroTessMesh is located at `NeuroLOTs & NeuroTes
 Installation and running
 ------------------------
 
-.. note::
-   Work in progress.
+NeuroTessMesh can be downloaded from the `NeuroLOTs & NeuroTessMesh Homepage`_ for Linux and Mac operating systems and executed locally. Additionally it can be executed using a docker image.
+
+^^^^^^^^^^^^^^^^^
+Executing locally
+^^^^^^^^^^^^^^^^^
+
+The application options and parameters are:
+
+.. tabularcolumns:: |p{3.5cm}|p{2.5cm}|p{9.0cm}|
+
++------------------------+---------------------------------+------------------------------------------------------------------------------------------+
+| **OPTION**             | **PARAMETER**                   | **DESCRIPTION**                                                                          |
++========================+=================================+==========================================================================================+
+| ``--version``          | *none*                          | Shows the version of the application.                                                    |
++------------------------+---------------------------------+------------------------------------------------------------------------------------------+
+| ``--help``             | *none*                          | Shows the options and arguments used                                                     |
+|                        |                                 | for executing the application.                                                           |
++------------------------+---------------------------------+------------------------------------------------------------------------------------------+
+| ``-bc``                | *path_to_bc_file*               | Load BlueConfig file.                                                                    |
++------------------------+---------------------------------+------------------------------------------------------------------------------------------+
+| ``-swc``               | *path_to_swc_file*              | Load SWC file.                                                                           |
++------------------------+---------------------------------+------------------------------------------------------------------------------------------+
+| ``-xml``               | *path_to_xml_file*              | Load XML scene file.                                                                     |
++------------------------+---------------------------------+------------------------------------------------------------------------------------------+
+| ``-target``            | *target_label*                  | Specifies target label of the BlueConfig file.                                           |
++------------------------+---------------------------------+------------------------------------------------------------------------------------------+
+| ``-zeroeq``            | *schema_id*                     | Enables ZeroEQ communications with the specified id.                                     |
++------------------------+---------------------------------+------------------------------------------------------------------------------------------+
+| ``--json``             | *path_to_json_file*             | Load JSON data file.                                                                     |
++------------------------+---------------------------------+------------------------------------------------------------------------------------------+
+| ``-ws``                | *width* *height*                | Specifies the size of the application window.                                            |
+|                        |                                 |                                                                                          |
+| ``--window-size``      |                                 |                                                                                          |
++------------------------+---------------------------------+------------------------------------------------------------------------------------------+
+| ``-fs``                | *none*                          | Sets the application window to fullscreen mode.                                          |
+|                        |                                 |                                                                                          |
+| ``--fullscreen``       |                                 |                                                                                          |
++------------------------+---------------------------------+------------------------------------------------------------------------------------------+
+| ``-mw``                | *none*                          | Maximizes the application window to the desktop resolution.                              |
+|                        |                                 |                                                                                          |
+| ``--maximize-window``  |                                 |                                                                                          |
++------------------------+---------------------------------+------------------------------------------------------------------------------------------+
+| ``-s``                 | *samples_number*                | Sets the samples number for OpenGL.                                                      |
+|                        |                                 |                                                                                          |
+| ``--samples``          |                                 | Overwritten, if present, by the enviroment variable CONTEXT_OPENGL_SAMPLES.              |
++------------------------+---------------------------------+------------------------------------------------------------------------------------------+
+| ``-nvs``               | *none*                          | Disables vertical sync for OpenGL.                                                       |
+|                        |                                 |                                                                                          |
+| ``--no-vsync``         |                                 | Overwritten, if present, by the enviroment variable CONTEXT_OPENGL_VSYNC.                |
++------------------------+---------------------------------+------------------------------------------------------------------------------------------+
+| ``-cv``                | *major* *minor*                 | Sets the OpenGL version of the application.                                              |
+|                        |                                 |                                                                                          |
+| ``--context-version``  |                                 | Overwritten, if present, by the enviroment variables CONTEXT_OPENGL_MAJOR and            |
+|                        |                                 | CONTEXT_OPENGL_MINOR.                                                                    |
++------------------------+---------------------------------+------------------------------------------------------------------------------------------+
+
+If the options are incompatible or its parameters invalid the application will abort the execution and will show the help message in the console.
+
+^^^^^^^^^^^^
+Test dataset
+^^^^^^^^^^^^
+
+A test data for NeuroTessMesh can be downloaded from:
+
+* http://neuromorpho.org/dableFiles/allen%20cell%20types/CNG%20version/H16-03-001-01-09-01_559391771_m.CNG.swc
+
+^^^^^^^^^^^^^^
+Docker example
+^^^^^^^^^^^^^^
+
+.. code-block:: bash
+  :linenos:
+  :emphasize-lines: 7
+
+  xhost +local:docker
+  # Pull the image
+  docker pull vglab/neurotessmesh:0.0.1-ubuntu-16.04
+  # Download example data
+  wget http://neuromorpho.org/dableFiles/allen%20cell%20types/CNG%20version/H16-03-001-01-09-01_559391771_m.CNG.swc
+  # Run example
+  docker run --gpus 1 -ti --rm -e DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix -v /etc/machine-id:/etc/machine-id -v $(pwd)/H16-03-001-01-09-01_559391771_m.CNG.swc:/H16-03-001-01-09-01_559391771_m.CNG.swc   --privileged vglab/neurotessmesh /usr/bin/NeuroTessMesh -swc /H16-03-001-01-09-01_559391771_m.CNG.swc
 
