@@ -110,8 +110,8 @@ Docker example
   :emphasize-lines: 7
 
   xhost +local:docker
-  # Pull the image (do not use tag to download latest version).
-  docker pull vglab/neurotessmesh
+  # Pull the image.
+  docker pull vglab/neurotessmesh:0.0.1-nvidia-ubuntu-16.04
   # Download example data
   wget http://neuromorpho.org/dableFiles/allen%20cell%20types/CNG%20version/H16-03-001-01-09-01_559391771_m.CNG.swc
   # Run example
