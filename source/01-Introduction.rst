@@ -38,6 +38,14 @@ Installation and running
 NeuroTessMesh can be downloaded from the `NeuroLOTs & NeuroTessMesh Homepage`_ for Linux and Mac operating systems and executed locally. Additionally it can be executed using a docker image.
 
 ^^^^^^^^^^^^^^^^^
+Docker containers
+^^^^^^^^^^^^^^^^^
+
+The docker containers for **NeuroTessMesh** can be found on `Docker Hub`_. It's recommended to use the highest tag number as it represents the latest official release.
+
+.. _Docker Hub: https://hub.docker.com/r/vglab/neurotessmesh/tags?page=1&ordering=last_updated
+
+^^^^^^^^^^^^^^^^^
 Executing locally
 ^^^^^^^^^^^^^^^^^
 
@@ -115,5 +123,5 @@ Docker example
   # Download example data
   wget http://neuromorpho.org/dableFiles/allen%20cell%20types/CNG%20version/H16-03-001-01-09-01_559391771_m.CNG.swc
   # Run example
-  docker run --gpus 1 -ti --rm -e DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix -v /etc/machine-id:/etc/machine-id -v $(pwd)/H16-03-001-01-09-01_559391771_m.CNG.swc:/H16-03-001-01-09-01_559391771_m.CNG.swc   --privileged vglab/neurotessmesh /usr/bin/NeuroTessMesh -swc /H16-03-001-01-09-01_559391771_m.CNG.swc
+  docker run --gpus 1 -ti --rm -e DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix -v /etc/machine-id:/etc/machine-id -v $(pwd)/H16-03-001-01-09-01_559391771_m.CNG.swc:/H16-03-001-01-09-01_559391771_m.CNG.swc --privileged vglab/neurotessmesh:0.0.1-nvidia-ubuntu-16.04 /usr/bin/NeuroTessMesh -swc /H16-03-001-01-09-01_559391771_m.CNG.swc
 
