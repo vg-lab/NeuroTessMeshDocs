@@ -119,9 +119,9 @@ Docker example
 
   xhost +local:docker
   # Pull the image.
-  docker pull vglab/neurotessmesh:0.0.1-nvidia-ubuntu-16.04
+  docker pull vglab/neurotessmesh:0.1.0-nvidia-ubuntu-16.04
   # Download example data
   wget http://neuromorpho.org/dableFiles/allen%20cell%20types/CNG%20version/H16-03-001-01-09-01_559391771_m.CNG.swc
   # Run example
-  docker run --gpus 1 -ti --rm -e DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix -v /etc/machine-id:/etc/machine-id -v $(pwd)/H16-03-001-01-09-01_559391771_m.CNG.swc:/H16-03-001-01-09-01_559391771_m.CNG.swc --privileged vglab/neurotessmesh:0.0.1-nvidia-ubuntu-16.04 /usr/bin/NeuroTessMesh -swc /H16-03-001-01-09-01_559391771_m.CNG.swc
+  docker run --gpus 1 -ti --rm -e DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix -v /etc/machine-id:/etc/machine-id -v $(pwd)/H16-03-001-01-09-01_559391771_m.CNG.swc:/H16-03-001-01-09-01_559391771_m.CNG.swc --privileged vglab/neurotessmesh:0.1.0-nvidia-ubuntu-16.04 /usr/bin/NeuroTessMesh -swc /H16-03-001-01-09-01_559391771_m.CNG.swc
 
