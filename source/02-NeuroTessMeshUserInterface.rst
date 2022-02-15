@@ -48,7 +48,7 @@ Configuration
 .. figure:: images/NTMimage002.png
    :alt: Configuration panel
    :align: center
-   :width: 226
+   :width: 203
    :scale: 80%
 
    Configuration panel.
@@ -73,7 +73,7 @@ Render panel
 .. figure:: images/NTMimage003.png
    :alt: Render panel
    :align: center
-   :width: 272
+   :width: 329
    :scale: 80%
 
    Render panel.
@@ -95,7 +95,7 @@ Edit and save panel
 .. figure:: images/NTMimage004.png
    :alt: Edit and save panel
    :align: center
-   :width: 842
+   :width: 1001
    :scale: 60%
 
    Edit and save panel.
@@ -108,7 +108,45 @@ The camera can be manipulated using the mouse. The movements are:
   - Rotation: mouse left button + mouse movement. 
   - Translation: mouse scroll button + mouse movement. 
   - Zoom: mouse scroll to zoom in and out.
-  
+
+--------
+Recorder
+--------
+
+The recording feature can be activated using the **Options** menu or by clicking the Recorder icon in the toolbar. The user will be presented with the recorder configuration dialog (:numref:`figA`).
+
+.. _figA:
+
+.. figure:: images/NTMimage010.png
+   :alt: Recorder standard configuration dialog.
+   :align: center
+   :width: 802
+   :scale: 60%
+
+   Recorder standard configuration dialog. 
+
+The recorder will generate a mp4 video if the media application **ffmpeg** is detected and available, if not the generated output will be individual frames. The frames per second of the output can be specified here. The user can specify the input of the recording, being the main application window or just the 3D viewport.
+
+In the advanced configuration dialog (:numref:`figB`) the user can modify additional options as which worker (video or frames) to use to generate the output. The advanced configuration dialog can be enabled by checking the **Advanced recorder options checkbox** in the Options menu).
+
+.. _figB:
+
+.. figure:: images/NTMimage011.png
+   :alt: Recorder advanced configuration dialog.
+   :align: center
+   :width: 802
+   :scale: 60%
+
+   Recorder advanced configuration dialog. 
+
+Using the advanced configuration an area of the application can be selected for recording as input.
+
+If the output is a video the user can specify the location of the generated file using the Select button. If the output is a sequence of frames the user can specify the destination directory using the Select button in the dialog.
+
+The dimensions of the output are shown and can be modified with the scale options.
+
+While the recorder is working the associated toolbar button will remain down and the user must click it again to stop it. The recorder can also be stopped using the Recorder button in the Tools menu or the keyboard shortcut **Ctrl + R**.
+
 ------------------
 Keys and shortcuts
 ------------------
@@ -124,4 +162,5 @@ Keys and shortcuts
   - **Render options**: Ctrl + B
   - **Edit and save**: Ctrl + M
   - **Configuration**: Ctrl + C
+  - **Toggle Recorder**: Ctrl + R
 

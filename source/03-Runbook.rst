@@ -12,7 +12,7 @@ Runbook
 .. figure:: images/NTMimage005.png
    :alt: Opening a file.
    :align: center
-   :width: 1000
+   :width: 997
    :scale: 60%
 
    Opening a file.
@@ -28,7 +28,7 @@ Runbook
 .. figure:: images/NTMimage006.png
    :alt: 3D view navigation.
    :align: center
-   :width: 1000
+   :width: 1020
    :scale: 60%
 
    3D View navigation.
@@ -44,7 +44,7 @@ Runbook
 .. figure:: images/NTMimage007.png
    :alt: Render options manipulation.
    :align: center
-   :width: 998
+   :width: 1020
    :scale: 60%
 
    Render options manipulation.
@@ -60,7 +60,7 @@ Runbook
 .. figure:: images/NTMimage008.png
    :alt: Reconstruction parameters manipulation.
    :align: center
-   :width: 1001
+   :width: 1020
    :scale: 60%
 
    Reconstruction parameters manipulation.

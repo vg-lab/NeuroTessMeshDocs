@@ -18,11 +18,11 @@
 # -- Project information -----------------------------------------------------
 
 project = 'NeuroTessMesh'
-copyright = '2021, Universidad Rey Juan Carlos'
+copyright = '2022, Universidad Rey Juan Carlos'
 author = 'Félix de las Pozas Álvarez'
 
 # The full version, including alpha/beta/rc tags
-release = '0.1.1'
+release = '0.2.0'
 
 
 # -- General configuration ---------------------------------------------------
@@ -67,9 +67,9 @@ latex_maketitle = r'''
 \begin{center}
   \includegraphics[width=6cm,height=6cm]{neurotessmesh.png}\\[8ex]
   {\Huge NeuroTessMesh Documentation}\\[4ex]
-  {\Large Version 0.1.1}\\[4ex]
+  {\Large Version 0.2.0}\\[4ex]
   {\Large Juan Jos\'{e} Garc\'{i}a Cantero \& F\'{e}lix de las Pozas \'{A}lvarez}\\[4ex]
-  {\Large December 2021}\\[16ex]
+  {\Large February 2022}\\[16ex]
   {\Large Visualization \& Graphics Lab, Universidad Rey Juan Carlos}\\[4ex]
   \includegraphics[width=3cm,height=3cm]{logo.png}
 \end{center}
@@ -90,7 +90,7 @@ latex_elements = {
     %\fancyfoot[LO]{{\py@HeaderFamily\nouppercase{\rightmark}}}
     %\fancyfoot[RE]{{\py@HeaderFamily\nouppercase{\leftmark}}}
 % add copyright stuff
-    \fancyfoot[LO,RE]{{ \textcopyright\ 2021 Visualization \& Graphics Lab VG-Lab URJC.}}
+    \fancyfoot[LO,RE]{{ \textcopyright\ 2022 Visualization \& Graphics Lab VG-Lab URJC.}}
 % again original stuff
     \fancyhead[LE,RO]{{\py@HeaderFamily \@title\sphinxheadercomma\py@release}}
     \renewcommand{\headrulewidth}{0.4pt}
@@ -104,7 +104,7 @@ latex_elements = {
     \renewcommand{\footrulewidth}{0.4pt}
 % add copyright stuff for example at left of footer on odd pages,
 % which is the case for chapter opening page by default
-    \fancyfoot[LO,RE]{{ \textcopyright\ 2021 Visualization \& Graphics Lab VG-Lab URJC.}}
+    \fancyfoot[LO,RE]{{ \textcopyright\ 2022 Visualization \& Graphics Lab VG-Lab URJC.}}
     }
 \makeatother
 ''',
