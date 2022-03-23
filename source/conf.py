@@ -22,7 +22,7 @@ copyright = '2022, Universidad Rey Juan Carlos'
 author = 'Félix de las Pozas Álvarez'
 
 # The full version, including alpha/beta/rc tags
-release = '0.2.0'
+release = '0.2.1'
 
 
 # -- General configuration ---------------------------------------------------
@@ -67,9 +67,9 @@ latex_maketitle = r'''
 \begin{center}
   \includegraphics[width=6cm,height=6cm]{neurotessmesh.png}\\[8ex]
   {\Huge NeuroTessMesh Documentation}\\[4ex]
-  {\Large Version 0.2.0}\\[4ex]
+  {\Large Version 0.2.1}\\[4ex]
   {\Large Juan Jos\'{e} Garc\'{i}a Cantero \& F\'{e}lix de las Pozas \'{A}lvarez}\\[4ex]
-  {\Large February 2022}\\[16ex]
+  {\Large March 2022}\\[16ex]
   {\Large Visualization \& Graphics Lab, Universidad Rey Juan Carlos}\\[4ex]
   \includegraphics[width=3cm,height=3cm]{logo.png}
 \end{center}
