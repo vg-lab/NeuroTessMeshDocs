@@ -13,7 +13,6 @@ Hardware requirements
 The application requires a graphic card that supports OpenGL 4.0 at least. NVIDIA offers support for GPU tessellation from the GTX 400 serie on, and ATI/AMD from Radeon  HD  5000  serie  on.  Previous  series  of  both  companies  are  not  able  to tessellate and consequently the mesh refinement will not work. 
 
 .. note::
-
    The  GPU  Tessellation  on  Intel  graphics  cards  is  present  only  on  certain models, for more information  you  can  visit  the  next  link: `Supported  APIs  and  Features  for  Intel Graphics Drivers`_
    
 .. _Supported  APIs  and  Features  for  Intel Graphics Drivers: http://www.intel.com/content/www/us/en/support/graphics-drivers/000005524.html
