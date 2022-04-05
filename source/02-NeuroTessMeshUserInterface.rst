@@ -13,6 +13,8 @@ The application bar presents several icons to perform actions such as opening da
 .. figure:: images/NTMimage001.png
    :alt: NeuroTessMesh application toolbar
    :align: center
+   :width: 326
+   :scale: 100%
 
    NeuroTessMesh application tool bar. 
    
@@ -48,7 +50,7 @@ Configuration
 .. figure:: images/NTMimage002.png
    :alt: Configuration panel
    :align: center
-   :width: 203
+   :width: 252
    :scale: 80%
 
    Configuration panel.
@@ -73,7 +75,7 @@ Render panel
 .. figure:: images/NTMimage003.png
    :alt: Render panel
    :align: center
-   :width: 329
+   :width: 323
    :scale: 80%
 
    Render panel.
@@ -95,7 +97,7 @@ Edit and save panel
 .. figure:: images/NTMimage004.png
    :alt: Edit and save panel
    :align: center
-   :width: 1001
+   :width: 1020
    :scale: 60%
 
    Edit and save panel.
@@ -113,7 +115,7 @@ The camera can be manipulated using the mouse. The movements are:
 Recorder
 --------
 
-The recording feature can be activated using the **Options** menu or by clicking the Recorder icon in the toolbar. The user will be presented with the recorder configuration dialog (:numref:`figA`).
+The recording feature can be activated using the **Tools** menu or by clicking the Recorder icon in the toolbar. The user will be presented with the recorder configuration dialog (:numref:`figA`).
 
 .. _figA:
 
@@ -127,7 +129,7 @@ The recording feature can be activated using the **Options** menu or by clicking
 
 The recorder will generate a mp4 video if the media application **ffmpeg** is detected and available, if not the generated output will be individual frames. The frames per second of the output can be specified here. The user can specify the input of the recording, being the main application window or just the 3D viewport.
 
-In the advanced configuration dialog (:numref:`figB`) the user can modify additional options as which worker (video or frames) to use to generate the output. The advanced configuration dialog can be enabled by checking the **Advanced recorder options checkbox** in the Options menu).
+In the advanced configuration dialog (:numref:`figB`) the user can modify additional options as which worker (video or frames) to use to generate the output. The advanced configuration dialog can be enabled by checking the **Advanced recorder options checkbox** in the **Tools** menu).
 
 .. _figB:
 
@@ -145,7 +147,10 @@ If the output is a video the user can specify the location of the generated file
 
 The dimensions of the output are shown and can be modified with the scale options.
 
-While the recorder is working the associated toolbar button will remain down and the user must click it again to stop it. The recorder can also be stopped using the Recorder button in the Tools menu or the keyboard shortcut **Ctrl + R**.
+While the recorder is working the associated toolbar button will remain down and the icon will change every second with an image of a "Stop" button with REC letters written inside it. The user must click it again to stop the recording. The recorder can also be stopped using the **Recorder** button in the **Tools** menu or the keyboard shortcut **Ctrl + R**.
+
+.. note::
+   If the output is a video the filename of the output file will end with "_temporal" while recording. Once the recording has finished it will change to the selected output name in the configuration dialog. The application will warn if the user tries to exit the application while a recording is being made.
 
 .. warning::
    To record a video the system must have **ffmpeg** installed, preferably with Nvidia hardware acceleration. 

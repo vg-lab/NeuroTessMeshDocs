@@ -12,7 +12,7 @@ Runbook
 .. figure:: images/NTMimage005.png
    :alt: Opening a file.
    :align: center
-   :width: 997
+   :width: 999
    :scale: 60%
 
    Opening a file.
@@ -76,7 +76,7 @@ Runbook
 .. figure:: images/NTMimage009.png
    :alt: Save to file.
    :align: center
-   :width: 1001
+   :width: 999
    :scale: 60%
 
    Save results to file.
