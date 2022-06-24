@@ -111,6 +111,49 @@ The camera can be manipulated using the mouse. The movements are:
   - Translation: mouse scroll button + mouse movement. 
   - Zoom: mouse scroll to zoom in and out.
 
+---------------------------------
+NeuroTessMesh Menu Toolbar
+---------------------------------
+
+^^^^^^^^^
+File menu
+^^^^^^^^^
+- **Open BlueConfig**: Opens neuron morphology in BlueConfig format.
+- **Open XML scene**: Opens a scene composed of several neurons.
+- **Open SWC**: Opens a neuron morphology in SWC format.
+- **Load camera positions**: Loads a JSON file with the description of camera positions.
+- **Save camera positions**: Saves the currently stored camera positions to a JSON file.
+
+^^^^^^^^^^^^
+Options menu
+^^^^^^^^^^^^
+- **Home**: Reset view perspective to original values of focus and camera distance.
+- **Add camera position**: Adds the current camera position to the list of positions with a name given by the user (:numref:`figC`).
+
+.. _figC:
+
+.. figure:: images/NTMimage012.png
+   :alt: Camera position name dialog.
+   :align: center
+   :width: 220
+   :scale: 100%
+
+   Camera position name dialog.
+
+- **Remove camera position**: Lets the user remove a camera position from the list of positions.
+- **Camera positions**: Lists the currently stored camera positions in a submenu. Clicking on a camera position will move the camera to the position.
+- **Update on idle**: This will reduce visualization repaint calls to user interaction (camera rotation, etc.) and specific actions.
+- **Show FPS on idle update**: Displays a label with current frames per second rate. Note: this might reduce performance due to interface update calls, so it is recommended to hide it when not interested on measuring performance.
+- **Render options**: Shows/hides the render panel.
+- **Edit And Save**: Shows/hides the edit and save panel.
+- **Configuration**: Shows/hides the configuration panel.
+
+^^^^^^^^^^
+Tools menu
+^^^^^^^^^^
+- **Recorder**: This button shows the recorder configuration dialog if the recorder is not running. If the recorder is running it will stop the recorder.
+- **Advanced recorder options**: This option will enable advanced configuration options in the recorder configuration dialog.
+
 --------
 Recorder
 --------
