@@ -13,7 +13,7 @@ The application bar presents several icons to perform actions such as opening da
 .. figure:: images/NTMimage001.png
    :alt: NeuroTessMesh application toolbar
    :align: center
-   :width: 326
+   :width: 366
    :scale: 100%
 
    NeuroTessMesh application tool bar. 
@@ -97,10 +97,36 @@ Edit and save panel
 .. figure:: images/NTMimage004.png
    :alt: Edit and save panel
    :align: center
-   :width: 1020
+   :width: 999
    :scale: 60%
 
    Edit and save panel.
+
+
+^^^^^^^^^^^^
+Player panel
+^^^^^^^^^^^^
+
+The player panel is only enabled if the dataset loaded have neuron spikes information (currently only BlueConfig datasets). The panel contains the player options and the playing position bar.
+
+The player configuration options are:
+  - **Step delta time**: Amount of increment per simulation step. 
+  - **Steps/second**: Number of steps per second.
+
+.. _figa4:
+
+.. figure:: images/NTMimage013.png
+   :alt: Spike activation simulation.
+   :align: center
+   :width: 1020
+   :scale: 60%
+
+   Spike activation simulation.
+
+When a dataset has spike information the **player** panel allow the user to **play**, **stop** and position the simulation at the selected time. When a neuron activates it changes color to red, and then decays to the current neuron color. 
+
+.. warning::
+   Simulations are most visible if the render is only displaying the soma because when activated the whole neuron will change color.
 
 ^^^^^^^^^^^^^^^^^^^^^
 Scene camera controls
@@ -145,6 +171,7 @@ Options menu
 - **Update on idle**: This will reduce visualization repaint calls to user interaction (camera rotation, etc.) and specific actions.
 - **Show FPS on idle update**: Displays a label with current frames per second rate. Note: this might reduce performance due to interface update calls, so it is recommended to hide it when not interested on measuring performance.
 - **Render options**: Shows/hides the render panel.
+- **Simulation player options**: Shows/hides the spike simulation player. The player will be disabled if the dataset has no spike information.
 - **Edit And Save**: Shows/hides the edit and save panel.
 - **Configuration**: Shows/hides the configuration panel.
 

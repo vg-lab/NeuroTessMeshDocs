@@ -4,7 +4,7 @@ NeuroTessMesh Introduction
 
 **NeuroLOTs** is a set of libraries and tools that implement a method for generating neuronal meshes and for visualizing them at different levels of detail using GPU-based tessellation. As a part of NeuroLOTs, **NeuroTessMesh** provides a visual environment for the generation of 3D polygonal meshes that approximate the membrane of neuronal cells, from the morphological tracings that describe the morphology of the neurons. The 3D models can be tessellated at different levels of detail, providing either homogeneous or adaptive resolution along the model. The soma shape is recovered from the incomplete information of the tracings, applying a physical deformation model that can be interactively adjusted. The adaptive refinement process performed in the GPU generates meshes that allow good visual quality geometries at an affordable computational cost, both in terms of memory and rendering time. NeuroTessMesh is the front-end GUI to NeuroLOTs framework. 
 
-This documentation is for NeuroTessMesh version 0.3.2 software that can be obtained from the homepage.
+This documentation is for NeuroTessMesh version 0.4.0 software that can be obtained from the homepage.
 
 ---------------------
 Hardware requirements
@@ -117,9 +117,9 @@ Docker example
 
   xhost +local:docker
   # Pull the image.
-  docker pull vglab/neurotessmesh:0.3.2-nvidia-ubuntu-16.04
+  docker pull vglab/neurotessmesh:0.4.0-nvidia-ubuntu-16.04
   # Download example data
   wget http://neuromorpho.org/dableFiles/allen%20cell%20types/CNG%20version/H16-03-001-01-09-01_559391771_m.CNG.swc
   # Run example
-  docker run --gpus 1 -ti --rm -e DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix -v /etc/machine-id:/etc/machine-id -v $(pwd)/H16-03-001-01-09-01_559391771_m.CNG.swc:/H16-03-001-01-09-01_559391771_m.CNG.swc --privileged vglab/neurotessmesh:0.3.2-nvidia-ubuntu-16.04 /usr/bin/NeuroTessMesh -swc /H16-03-001-01-09-01_559391771_m.CNG.swc
+  docker run --gpus 1 -ti --rm -e DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix -v /etc/machine-id:/etc/machine-id -v $(pwd)/H16-03-001-01-09-01_559391771_m.CNG.swc:/H16-03-001-01-09-01_559391771_m.CNG.swc --privileged vglab/neurotessmesh:0.4.0-nvidia-ubuntu-16.04 /usr/bin/NeuroTessMesh -swc /H16-03-001-01-09-01_559391771_m.CNG.swc
 
