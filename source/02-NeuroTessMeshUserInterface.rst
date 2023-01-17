@@ -13,7 +13,7 @@ The application bar presents several icons to perform actions such as opening da
 .. figure:: images/NTMimage001.png
    :alt: NeuroTessMesh application toolbar
    :align: center
-   :width: 366
+   :width: 395
    :scale: 100%
 
    NeuroTessMesh application tool bar. 
@@ -22,11 +22,12 @@ The application bar presents several icons to perform actions such as opening da
 File
 ^^^^
    
-The first three icons loads an scene or neuron morphology. The neuron morphology must be described following the `SWC format`_ Scenes composed of severan neurons must be described using an XML specific format (described in the **file formats** section). 
+The first four icons loads an scene or neuron morphology. The neuron morphology must be described following the `SWC format`_ Scenes composed of severan neurons must be described using an XML specific format (described in the **file formats** section). 
 
   - **Open BlueConfig**: Opens neuron morphology in BlueConfig format.
   - **Open XML scene**: Opens a scene composed of several neurons. 
   - **Open SWC**: Opens a neuron morphology in SWC format. 
+  - **Open HDF5**: Opens neuron morphology in HDF5 format.
   
 .. _SWC format: http://www.neuronland.org/NLMorphologyConverter/MorphologyFormats/SWC/Spec.html
 
