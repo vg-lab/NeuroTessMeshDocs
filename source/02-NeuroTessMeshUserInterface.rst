@@ -10,7 +10,7 @@ In this section we'll describe the different panels and configuration options in
    :alt: NeuronTessMesh application main window.
    :align: center
    :width: 1020
-   :scale: 100%
+   :scale: 60%
 
    NeuronTessMess application main window.
 
