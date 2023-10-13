@@ -2,6 +2,18 @@
 NeuroTessMesh User Interface
 ============================
 
+In this section we'll describe the different panels and configuration options in the main dialog. 
+
+.. _fig0:
+
+.. figure:: images/NTMimage000.png
+   :alt: NeuronTessMesh application main window.
+   :align: center
+   :width: 1020
+   :scale: 100%
+
+   NeuronTessMess application main window.
+
 ---------------------------------
 NeuroTessMesh Application Toolbar
 ---------------------------------
@@ -13,7 +25,7 @@ The application bar presents several icons to perform actions such as opening da
 .. figure:: images/NTMimage001.png
    :alt: NeuroTessMesh application toolbar
    :align: center
-   :width: 395
+   :width: 381
    :scale: 100%
 
    NeuroTessMesh application tool bar. 
@@ -60,23 +72,31 @@ Configuration
 Render panel
 ^^^^^^^^^^^^
 
-  - **Color**: Select the color for each of the following entities.
+  - **Color**: Selects the background color for the scene view.
   
-      - **Background**
-      - **Neuron**
-      - **Selected neuron**
       
-  - **Render piece selection**: select the parts (full, only soma, only neurites or  nothing) of the neuron to visualize. This selection can be done independently for each of the following  types of neurons.  
+  - **Render piece selection**: Select the parts (full, only soma, only neurites) of the neuron to visualize. This selection can be done independently for each of the following types of neurons.  
   
       - **Neuron**
       - **Selected neuron**
+
+The **Selected**, and **Unselected** neurons refer to the entities selected via ZeroEQ selection in other applications.
+
+  - **Render coloring**: Selects the coloring method for the current scene. There are four coloring methods:
+
+    - **Selection**: Color neurons by selection.
+    - **Morphology**: Color neurons by morphology type.
+    - **Layer**: Color neurons by layer.
+    - **Function**: Color neurons by function type.
+
+The render coloring method selected will affect the colors shown in the neuron list and edit panel. The color for each possible value can be modified by clicking in the colored box right next to the value name.
 
 .. _fig3:
 
 .. figure:: images/NTMimage003.png
    :alt: Render panel
    :align: center
-   :width: 323
+   :width: 322
    :scale: 80%
 
    Render panel.
@@ -85,6 +105,9 @@ Render panel
 Edit and save panel
 ^^^^^^^^^^^^^^^^^^^
 
+The **edit and save** panel list the neurons in the scene colored by the selected coloring method in the render panel. The neurons are listed in this panel using the pattern *(id) (morphological type)* in its naming.
+
+  - **Show additional information**: adds the function and layer information to the neuron name (if available).
   - **Select Neuron**: select the target neuron from a list of the neurons in the current scene.  
   - **Parameters**: different parameters to modify the reconstructed neuronal mesh.  
   
@@ -98,45 +121,45 @@ Edit and save panel
 .. figure:: images/NTMimage004.png
    :alt: Edit and save panel
    :align: center
-   :width: 999
-   :scale: 60%
-
-   Edit and save panel.
-
-
-^^^^^^^^^^^^
-Player panel
-^^^^^^^^^^^^
-
-The player panel is only enabled if the dataset loaded have neuron spikes information (currently only BlueConfig datasets). The panel contains the player options and the playing position bar.
-
-The player configuration options are:
-  - **Step delta time**: Amount of increment per simulation step. 
-  - **Steps/second**: Number of steps per second.
-
-.. _figa4:
-
-.. figure:: images/NTMimage013.png
-   :alt: Spike activation simulation.
-   :align: center
    :width: 1020
    :scale: 60%
 
-   Spike activation simulation.
+   Edit and save panel (left).
 
-When a dataset has spike information the **player** panel allow the user to **play**, **stop** and position the simulation at the selected time. When a neuron activates it changes color to red, and then decays to the current neuron color. 
+.. Commented out until player is activated again.  
+   ^^^^^^^^^^^^
+   Player panel
+   ^^^^^^^^^^^^
 
-.. warning::
-   Simulations are most visible if the render is only displaying the soma because when activated the whole neuron will change color.
+   The player panel is only enabled if the dataset loaded have neuron spikes information (currently only BlueConfig datasets). The panel contains the player options and the playing position bar.
+
+   The player configuration options are:
+     - **Step delta time**: Amount of increment per simulation step. 
+     - **Steps/second**: Number of steps per second.
+
+   .. _figa4:
+
+   .. figure:: images/NTMimage013.png
+      :alt: Spike activation simulation.
+      :align: center
+      :width: 1020
+      :scale: 60%
+
+      Spike activation simulation.
+
+   When a dataset has spike information the **player** panel allow the user to **play**, **stop** and position the simulation at the selected time. When a neuron activates it changes color to red, and then decays to the current neuron color. 
+
+   .. warning::
+      Simulations are most visible if the render is only displaying the soma because when activated the whole neuron will change color.
 
 ^^^^^^^^^^^^^^^^^^^^^
 Scene camera controls
 ^^^^^^^^^^^^^^^^^^^^^
 
 The camera can be manipulated using the mouse. The movements are:
-  - Rotation: mouse left button + mouse movement. 
-  - Translation: mouse scroll button + mouse movement. 
-  - Zoom: mouse scroll to zoom in and out.
+  - **Rotation:** mouse left button + mouse movement. 
+  - **Translation:** mouse scroll button (middle button) + mouse movement. 
+  - **Zoom:** mouse scroll to zoom in and out.
 
 ---------------------------------
 NeuroTessMesh Menu Toolbar
@@ -172,9 +195,11 @@ Options menu
 - **Update on idle**: This will reduce visualization repaint calls to user interaction (camera rotation, etc.) and specific actions.
 - **Show FPS on idle update**: Displays a label with current frames per second rate. Note: this might reduce performance due to interface update calls, so it is recommended to hide it when not interested on measuring performance.
 - **Render options**: Shows/hides the render panel.
-- **Simulation player options**: Shows/hides the spike simulation player. The player will be disabled if the dataset has no spike information.
 - **Edit And Save**: Shows/hides the edit and save panel.
 - **Configuration**: Shows/hides the configuration panel.
+
+.. Commented out until player is activated again.
+   - **Simulation player options**: Shows/hides the spike simulation player. The player will be disabled if the dataset has no spike information.
 
 ^^^^^^^^^^
 Tools menu

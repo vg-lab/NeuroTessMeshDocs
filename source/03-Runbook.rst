@@ -3,7 +3,7 @@ Runbook
 =======
 
 .. note::
-   This runbook will test the main functionalities of NeuroTessMesh and can be considered as a basic tutorial for the application, but **not** as a complete and exhaustive tutorial of all its functionalities. This runbook is up to date with NeuroTessMesh version 0.4.4 (some images are from version 0.4.0). 
+   This runbook will test the main functionalities of NeuroTessMesh and can be considered as a basic tutorial for the application, but **not** as a complete and exhaustive tutorial of all its functionalities. This runbook is up to date with NeuroTessMesh version 0.5.0. 
 
 1. Load a "swc" file (:numref:`fig5`). 
 
@@ -76,7 +76,7 @@ Runbook
 .. figure:: images/NTMimage009.png
    :alt: Save to file.
    :align: center
-   :width: 999
+   :width: 1000
    :scale: 60%
 
    Save results to file.
