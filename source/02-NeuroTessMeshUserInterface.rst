@@ -251,6 +251,7 @@ While the recorder is working the associated toolbar button will remain down and
 .. warning::
    To record a video the system must have **ffmpeg** installed, preferably with Nvidia hardware acceleration. 
    If ffmpeg is not available in the system only the **images** worker will be available in the recorder.
+   In Windows OS it is necessary to put the ffmpeg executable in the same directory of the NeuroTessMesh executable.
 
 ------------------
 Keys and shortcuts
