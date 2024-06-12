@@ -25,7 +25,7 @@ The application bar presents several icons to perform actions such as opening da
 .. figure:: images/NTMimage001.png
    :alt: NeuroTessMesh application toolbar
    :align: center
-   :width: 381
+   :width: 397
    :scale: 100%
 
    NeuroTessMesh application tool bar. 
@@ -206,6 +206,7 @@ Tools menu
 ^^^^^^^^^^
 - **Recorder**: This button shows the recorder configuration dialog if the recorder is not running. If the recorder is running it will stop the recorder.
 - **Advanced recorder options**: This option will enable advanced configuration options in the recorder configuration dialog.
+- **Take screenshot**: Takes a screenshot of the 3D view and shows a dialog to resize it before saving the image to disk.
 
 --------
 Recorder
@@ -252,6 +253,22 @@ While the recorder is working the associated toolbar button will remain down and
    To record a video the system must have **ffmpeg** installed, preferably with Nvidia hardware acceleration. 
    If ffmpeg is not available in the system only the **images** worker will be available in the recorder.
    In Windows OS it is necessary to put the ffmpeg executable in the same directory of the NeuroTessMesh executable.
+
+---------------
+Take screenshot
+---------------
+
+Using the **Take screenshot** action either from the menu or by using the toolbar icon will display the captured image in the resize dialog (:numref:`figH0`). The minimum size of width and height is one hundred pixels. The image will be resized to the selected resolution before showing a save dialog.
+
+.. _figH0:
+
+.. figure:: images/NTMimage014.png
+   :alt: Resize image dialog.
+   :align: center
+   :width: 430
+   :scale: 80%
+
+   Resize image dialog.
 
 ------------------
 Keys and shortcuts
